@@ -1,5 +1,6 @@
 package com.stackroute;
 import com.stackroute.demo.BeanLifeCycleDemoBean;
+import com.stackroute.demo.BeanPostProcessorDemo;
 import com.stackroute.domain.Actor;
 import com.stackroute.domain.Movie;
 import org.springframework.context.annotation.Bean;
@@ -28,5 +29,9 @@ public class AppConfig {
     @Bean(initMethod = "start", destroyMethod = "end")
     public BeanLifeCycleDemoBean demoBean(){
         return new BeanLifeCycleDemoBean();
+    }
+    @Bean
+    public BeanPostProcessorDemo processorDemo(){
+        return new BeanPostProcessorDemo();
     }
 }
