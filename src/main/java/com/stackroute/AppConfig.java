@@ -23,7 +23,7 @@ public class AppConfig {
 
     @Bean(name = {"Mujhse Shaadi Karogi", "MSK2"})
     public Movie movie(){
-        Movie movie = new Movie(actor3());
+        Movie movie = new Movie(actor1());
         return movie;
     }
 }
