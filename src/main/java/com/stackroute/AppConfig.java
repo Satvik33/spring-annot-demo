@@ -9,18 +9,21 @@ import org.springframework.context.annotation.Configuration;
 public class AppConfig {
 
     @Bean
-    public Actor acting(){
-        Actor actor = new Actor();
-        actor.setName("Batman");
-        actor.setGender("Male");
-        actor.setAge(43);
-        return actor;
+    public Actor actor1(){
+        return new Actor("KRK", "Male", 50);
+    }
+    @Bean
+    public Actor actor2(){
+        return new Actor("Rakhi Sawant", "Female", 45);
+    }
+    @Bean
+    public Actor actor3(){
+        return new Actor("Mallika Sherawat", "Female", 40);
     }
 
-    @Bean
-    public Movie making(){
-        Movie movie = new Movie();
-        movie.setActor(acting());
+    @Bean(name = {"aag101", "aag102"})
+    public Movie movie(){
+        Movie movie = new Movie(actor3());
         return movie;
     }
 }
