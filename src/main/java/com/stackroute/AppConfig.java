@@ -10,18 +10,18 @@ public class AppConfig {
 
     @Bean
     public Actor actor1(){
-        return new Actor("KRK", "Male", 50);
+        return new Actor("Akshay Kumar", "Male", 50);
     }
     @Bean
     public Actor actor2(){
-        return new Actor("Rakhi Sawant", "Female", 45);
+        return new Actor("Salman Khan", "Male", 50);
     }
     @Bean
     public Actor actor3(){
-        return new Actor("Mallika Sherawat", "Female", 40);
+        return new Actor("Priyanka Chopra", "Female", 40);
     }
 
-    @Bean(name = {"aag101", "aag102"})
+    @Bean(name = {"Mujhse Shaadi Karogi", "MSK2"})
     public Movie movie(){
         Movie movie = new Movie(actor3());
         return movie;
